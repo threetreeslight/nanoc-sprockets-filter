@@ -13,7 +13,7 @@ module Nanoc
 
         environment = ::Sprockets::Environment.new(File.expand_path('.')) do |env|
           assets =  ['javascripts', 'stylesheets', 'images', 'fonts']
-          paths =   ['content/assets/', 'lib/assets/', 'assets/', 'vendor/assets/' ].map{|p| assets.map{|f| "#{p}#{f}" } }.flatten
+          paths =   ['content/assets/', 'static/assets/', 'lib/assets/', 'assets/', 'vendor/assets/' ].map{|p| assets.map{|f| "#{p}#{f}" } }.flatten
 
           paths.each{ |path| env.append_path path }
         end
